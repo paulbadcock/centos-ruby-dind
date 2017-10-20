@@ -32,7 +32,7 @@ RUN \
      && rm -rf /ruby-$RUBY_VERSION.tar.gz \
      && gem update --system "$RUBYGEMS_VERSION" \
      && gem install bundler --version "$BUNDLER_VERSION" \
-     && yum clean all
+     && yum clean all \
      && rm -rf /var/cache/yum
 
 ENV GEM_HOME /usr/local/bundle
